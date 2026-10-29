@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "Gabelgrün – dein Küchenassistent",
+  "short_name": "Gabelgrün",
+  "description": "Rezepte, Essensplanung, Vorräte und Einkaufsliste an einem Ort.",
+  "lang": "de-AT",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f7f5ef",
+  "theme_color": "#365c46",
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
