@@ -1,33 +1,26 @@
 # Gabelgrün – mobile Web-App
 
-Diese Version ist bewusst ohne Angebots-/Preisvergleich aufgebaut. Die Funktion kann später ergänzt werden.
+Diese Version ist für GitHub Pages und die Nutzung im mobilen Safari-Browser vorbereitet.
+
+## Veröffentlichung / Aktualisierung über GitHub
+1. ZIP entpacken.
+2. Im GitHub-Repository `gabelgruen` die neuen Dateien im Hauptverzeichnis hochladen und bestehende Dateien überschreiben (`index.html`, `sw.js`, `manifest.webmanifest`, `README.md` sowie den Ordner `icons`).
+3. Änderungen committen. GitHub Pages aktualisiert die Website automatisch.
+4. Auf dem iPhone die veröffentlichte Seite in Safari neu laden. Falls noch die alte Version angezeigt wird, Safari schließen und erneut öffnen; der Offline-Cache wurde auf v2 erhöht.
 
 ## Enthalten
-- mobile-first Oberfläche für iPhone und Computer
-- als PWA für den Home-Bildschirm vorbereitet
-- Heute / Tagesübersicht
-- Rezeptsuche und Filter
-- Rezeptdetails mit Portionsanpassung
-- eigene Rezepte speichern und löschen
-- Essensplan nach Datum und Mahlzeit
-- Nährwertübersicht als Schätzung
-- Vorrat mit Zutaten und Mengen
-- Einkaufsliste
-- automatische Übernahme fehlender Rezeptzutaten in die Einkaufsliste
-- persönliche Einstellungen
-- Datenexport und -import als Sicherung
-- Offline-Grundgerüst per Service Worker
+- Mobile Oberfläche und Home-Bildschirm-Unterstützung
+- Startseite mit Tagesplan
+- Rezepte als zweispaltiges Raster auf kleinen Bildschirmen
+- Wochenkalender, Vorschlag für Montag bis Freitag und Austausch einzelner Mahlzeiten
+- Eine Mahlzeit je Datum und Mahlzeitentyp; vorhandene Mahlzeiten werden nicht still überschrieben
+- Eigener Bereich für geschätzte Nährwerte
+- Häufige Einkaufsprodukte (Startvorschläge plus lokal gezählte Wiederholung)
+- Rezepte, Vorrat und Einkaufsliste lokal im Browser gespeichert
 
-## Aktueller Stand
-Die Daten dieser ersten Online-Version werden noch lokal im jeweiligen Browser gespeichert. Das bedeutet: iPhone und Computer teilen die Daten noch nicht automatisch.
-
-Die Cloud-Synchronisierung ist der nächste technische Schritt. Der Angebots-/Preisvergleich für SPAR, Lidl und HOFER wird bewusst erst danach ergänzt.
-
-## Veröffentlichung mit GitHub Pages
-1. Repository auf GitHub erstellen, z. B. `gabelgruen`.
-2. Die Dateien aus diesem Ordner in das Hauptverzeichnis des Repositorys hochladen. Wichtig: `index.html`, `manifest.webmanifest`, `sw.js` und den Ordner `icons`.
-3. In GitHub: Settings → Pages → Build and deployment → Deploy from a branch → Branch `main` → Folder `/ (root)` → Save.
-4. Die von GitHub angezeigte Website-Adresse in Safari auf dem iPhone öffnen.
-5. In Safari: Teilen → Zum Home-Bildschirm → Hinzufügen.
-
-Danach lässt sich Gabelgrün direkt über das Home-Screen-Symbol öffnen.
+## Aktuelle Grenzen
+- Daten bleiben lokal auf dem jeweiligen Gerät; es gibt noch keine Cloud-Synchronisierung oder Benutzerkonten.
+- Ein Rezept-Link kann geöffnet werden, aber das automatische Auslesen beliebiger Rezept-Websites ist noch nicht aktiv. Viele Websites blockieren browserseitigen Zugriff (CORS); dafür brauchen wir später einen kleinen sicheren Server-/Proxy-Dienst.
+- Wochenplanung erstellt einen unverbindlichen Zufallsvorschlag aus vorhandenen Rezepten. Sie ist noch keine KI-gestützte Planung und berücksichtigt noch nicht automatisch alle persönlichen Vorlieben.
+- Nährwerte sind Schätzwerte.
+- Angebots-/Preisvergleich ist absichtlich nicht enthalten.
